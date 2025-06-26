@@ -286,7 +286,7 @@ p {
 }
 
 .blue-bg-3 {
-  background: #b8dde3;
+  background: #fcb900;
 }
 
 .blue-bg-4 {
@@ -2607,7 +2607,7 @@ p {
   background: #f2277e;
 }
 .course__tag a.yellow {
-  background: #ffa507;
+  background: #ff0707;
 }
 .course__tag-2 i {
   color: #2b4eff;
@@ -2615,11 +2615,11 @@ p {
 }
 .course__tag-2 a {
   font-size: 16px;
-  color: #53545b;
+  color:#fcb900;
   font-weight: 500;
 }
-.course__tag-2 a:hover {
-  color: #2b4eff;
+/* .course__tag-2 a:hover {
+  color: #2b4eff; */
 }
 .course__title {
   font-size: 20px;
@@ -2631,9 +2631,9 @@ p {
     font-size: 18px;
   }
 }
-.course__title a:hover {
+/* .course__title a:hover {
   color: #2b4eff;
-}
+} */
 .course__title-2 {
   font-size: 24px;
   margin-bottom: 2px;
@@ -5580,10 +5580,17 @@ button[type="submit"]:hover {
 /*----------------------------------------*/
 /*  02. SERVICES CSS START
 /*----------------------------------------*/
+/*----------------------------------------*/
+/*  02. SERVICES CSS START
+/*----------------------------------------*/
+/* Start of Selection */
+/* Start of Selection */
+/* Start of Selection */
 .services__item {
   position: relative;
-  padding: 40px 40px;
-  padding-bottom: 45px;
+  align-items: center;
+  padding: 30px 25px;
+  padding-bottom: 35px;
   -webkit-box-shadow: 0px 30px 40px 0px rgba(3, 24, 128, 0.2);
   -moz-box-shadow: 0px 30px 40px 0px rgba(3, 24, 128, 0.2);
   box-shadow: 0px 30px 40px 0px rgba(3, 24, 128, 0.2);
@@ -5601,77 +5608,221 @@ button[type="submit"]:hover {
   -ms-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
   -o-transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
   transition: transform 0.3s cubic-bezier(0.21, 0.6, 0.44, 2.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 300px;
+  width: 100%;
 }
+
+/* Container for services to display in single row */
+/* Start of Selection */
+.services__area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.services__area .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services__area .row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+  align-items: center;
+  justify-content: center;
+}
+
+.services__area .col-xxl-3,
+.services__area .col-xl-3,
+.services__area .col-lg-3,
+.services__area .col-md-6 {
+  flex: 0 0 250px;
+  min-width: 250px;
+  max-width: 250px;
+  height: 300px;
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .services__item {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .services__area .row {
+    max-width: 1000px;
+  }
+  
+  .services__area .col-xxl-3,
+  .services__area .col-xl-3,
+  .services__area .col-lg-3,
+  .services__area .col-md-6 {
+    flex: 0 0 220px;
+    min-width: 220px;
+    max-width: 220px;
+    height: 300px;
+    background-color: ;
   }
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .services__item {
     padding-left: 15px;
     padding-right: 15px;
   }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .services__item {
-    padding-left: 25px;
-    padding-right: 25px;
+  
+  .services__area .row {
+    max-width: 900px;
+  }
+  
+  .services__area .col-xxl-3,
+  .services__area .col-xl-3,
+  .services__area .col-lg-3,
+  .services__area .col-md-6 {
+    flex: 0 0 200px;
+    min-width: 200px;
+    max-width: 200px;
+    height: 300px;
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services__area .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    max-width: 800px;
+  }
+  
+  .services__area .col-xxl-3,
+  .services__area .col-xl-3,
+  .services__area .col-lg-3,
+  .services__area .col-md-6 {
+    flex: 0 0 calc(50% - 20px);
+    min-width: 200px;
+    max-width: none;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .services__item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .services__area .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    max-width: 600px;
+  }
+  
+  .services__area .col-xxl-3,
+  .services__area .col-xl-3,
+  .services__area .col-lg-3,
+  .services__area .col-md-6 {
+    flex: 0 0 calc(50% - 15px);
+    min-width: 180px;
+    max-width: none;
+    height: 300px;
+  }
+}
+
+@media (max-width: 575px) {
+  .services__area .row {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+    max-width: 350px;
+  }
+  
+  .services__area .col-xxl-3,
+  .services__area .col-xl-3,
+  .services__area .col-lg-3,
+  .services__area .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+}
+/* End of Selection */
+
 .services__item:hover {
   -webkit-transform: translateY(-5px) translate3d(0, -5px, 0);
   -moz-transform: translateY(-5px) translate3d(0, -5px, 0);
   -ms-transform: translateY(-5px) translate3d(0, -5px, 0);
   transform: translateY(-5px) translate3d(0, -5px, 0);
 }
-/* .services__item:hover p {
-  visibility: hidden;
-  opacity: 0;
-} */
+
 .services__item:hover .link-btn-2 {
-  bottom: 45px;
+  bottom: 35px;
   visibility: visible;
   opacity: 1;
 }
+
 .services__title {
-  font-size: 22px;
+  font-size: 20px;
   color: #ffffff;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 }
+
 .services__icon {
-  margin-bottom: 43px;
+  margin-bottom: 25px;
 }
+
 .services__icon svg {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 }
+
 .services__icon svg path {
   fill: #ffffff;
 }
+
 .services__content p {
   color: #ffffff;
   opacity: 0.8;
-  line-height: 22px;
+  line-height: 20px;
   margin-bottom: 0;
+  font-size: 14px;
 }
+
 .services__content .link-btn-2 {
   position: absolute;
-  left: 40px;
-  bottom: 20px;
+  left: 25px;
+  bottom: 15px;
   visibility: hidden;
   opacity: 0;
   color: #ffffff;
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .services__content .link-btn-2 {
     left: 15px;
   }
 }
+
 .services__content .link-btn-2:hover {
   border-color: #ffffff;
 }
+/* End of Selection */
+/* End of Selection */
+/* End of Selection */
 
 /*----------------------------------------*/
 /*  12. ABOUT CSS START
@@ -6272,9 +6423,9 @@ button[type="submit"]:hover {
     font-size: 18px;
   }
 }
-.blog__title a:hover {
+/* .blog__title a:hover {
   color: #2b4eff;
-}
+} */
 .blog__content {
   padding: 30px;
   padding-bottom: 35px;
